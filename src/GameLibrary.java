@@ -1,4 +1,8 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Scanner;
 public class GameLibrary{
     private ArrayList<Game> games;
 
@@ -45,6 +49,45 @@ public class GameLibrary{
  }
   return count;
  }
+
+   // file i/o for printing games
+   
+    public void loadGames() throws FileNotFoundException {
+        Scanner scanner = new Scanner(new File("games.txt"));
+
+     while (scanner.hasNextLine()) {
+        String line = scanner.nextLine();
+
+          if (line.isEmpty()) {
+            continue;
+        }
+        
+        String[] parts = line.split(",");
+
+         Game game = new Game(parts[0], parts[1], parts[2], Double.parseDouble(parts[3]), parts[4]);
+  
+        games.add(game);
+
+    }
+        scanner.close();
+    }
+
+    public void saveGames() throws FileNotFoundException {
+    PrintWriter writer = new PrintWriter("games.txt");
+
+    for (Game item : games) {
+        writer.println(
+         item.getTitle() + "," +
+         item.getGenre() + "," +
+         item.getPlatform() + "," +
+         item.getRating() + "," +
+         item.getStatus()
+        );
+    }
+
+    writer.close();
+
+    }
 
 
 }

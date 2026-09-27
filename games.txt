@@ -1,0 +1,4 @@
+Genshin-Impact,RPG,PC,9.0,ongoing
+Elden-Ring,Action,PC,9.5,completed
+Sekiro,Action,console,9.0,completed
+
