@@ -41,18 +41,14 @@ public class GameLibrary{
  }
 
  public int countGames(){
- int count=0;
-    for(int i=0;i<games.size();i++){
-    if(games.get(i)!=null){
-    count++;
- }
- }
-  return count;
+
+  return games.size();
  }
 
    // file i/o for printing games
    
     public void loadGames() throws FileNotFoundException {
+        games.clear();
         Scanner scanner = new Scanner(new File("games.txt"));
 
      while (scanner.hasNextLine()) {

@@ -1,4 +1,5 @@
-Genshin-Impact,RPG,PC,9.0,ongoing
-Elden-Ring,Action,PC,9.5,completed
-Sekiro,Action,console,9.0,completed
-
+genshin impact,RPG,PC,9.0,ongoing
+elden ring,Action,PC,9.5,completed
+sekiro,Action,console,9.0,completed
+hollowknight,Metroidvania,PC,8.5,Completed
+cyberpunk2077,RPG,PC,7.5,Not Completed

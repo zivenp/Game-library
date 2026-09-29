@@ -20,12 +20,11 @@ Game(String title, String genre, String platform, double rating, String completi
 public String getTitle(){return title;}
 public String getGenre(){ return genre;} 
 public String getPlatform(){ return platform;}
+public double getRating() {return rating;}
 public String getStatus(){ return completionStatus;}
 
-// get and change rating 
-public double getRating() {
-    return rating;
-}
+
+//  change rating 
 public void setRating(double rating){
   this.rating=rating;
 }
